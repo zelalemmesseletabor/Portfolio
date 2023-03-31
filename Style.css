@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+
+
+
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  background-color: #f8dbdb;
+ 
+}
+header container nav{
+  position: fixed;
+  float: left;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  display: inline-block;
+  list-style-type: none;
+  margin: 10;
+  padding: 10px;
+  text-align: center;
+  top: 300px;
+ 
+}
+
+
+@media (max-width:800px){
+  #welcome-section {
+  background-color: rgba(218, 176, 238, 0.175);
+  background-size: cover;
+  background-position: auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding: left 100px;
+  padding-right: 100px;
+  top: 70px;
+  text-align: center;
+
+  color: rgb(22, 10, 10);
+}
+}
+
+
+#welcome-section h1 {
+
+  font-size: 52px;
+  text-align: center;
+}
+
+#welcome-section p {
+
+  font-size: 32px;
+  text-align: center;
+}
+
+
+#contact {
+  width: 75%;
+  height: auto;
+  top: 4vw;
+  left: 22vw;
+  color: rgb(218, 205, 205);
+  text-align: center;
+}
+
+.contact-section-header h2{
+  width: 50vw;
+  text-align: center;
+
+  top: 100vw;
+
+
+
+}
+
+
+#LinkedIn {
+  width: 5vw;
+  text-align: left;
+
+  position: absolute;
+  top: 45vw;
+  left: 15vw;
+
+  opacity: 0.85;
+  z-index: 3;
+}
+
+#Instagram {
+  width: 5vw;
+  text-align: left;
+
+  position: absolute;
+  top: 45vw;
+  left: 20vw;
+
+  opacity: 0.85;
+  z-index: 3;
+}
+
+#YouTube {
+  width: 5vw;
+  text-align: left;
+
+  position: absolute;
+  top: 45vw;
+  left: 25vw;
+
+  opacity: 0.85;
+  z-index: 3;
+}
+#profile-link{
+  width: 5vw;
+  text-align: left;
+
+  position: absolute;
+  top: 45vw;
+  left: 30vw;
+
+  opacity: 0.85;
+  z-index: 3;
+
+
+}
+footer {
+  font-style: oblique;
+  padding: 1px 0;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 0.9rem;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+footer p {
+  margin: 0 auto;
+}
+
+#projects {
+  width: 100%;
+  height: auto;
+
+  top: 46vw;
+  left: 10vw;
+
+  background-color: rgba(125, 113, 113, 0.46);
+  padding: 5px;
+}
+
+#projects h3 {
+  text-align: left;
+  font-size: 3vw;
+  color: white;
+
+  position: absolute;
+  top: 2vw;
+  left: 2vw;
+
+  border-bottom: 1px solid #40e0d0;
+  border-bottom-width: 1px;
+
+  word-spacing: 2px;
+  letter-spacing: 5px;
+}
+
+.contact-section-header h2 {
+  text-align: left;
+  font-size: 2vw;
+  color: rgb(30, 14, 14);
+
+  position: absolute;
+  top: 83vw;
+  left: 35vw;
+}
+
+#nav h2 {
+  text-align: left;
+}
