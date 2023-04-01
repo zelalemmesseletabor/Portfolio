@@ -1,9 +1,11 @@
 /* Custom properties/variables  */
 :root {
-    --main-white: #f0f0f0;
+    --main-white: #ffffff;
     --main-red: #6ef0a8;
     --main-blue: #45567d;
-    --main-gray: #374130;
+    --main-gray: #c3bebe;
+    --main-black: #000000; 
+    --main-header:#f8dbdb;
   }
   
   /* Base reset */
@@ -21,31 +23,11 @@
   
   html {
     box-sizing: border-box;
-  
-    /* Set font size for easy rem calculations
-     * default document font size = 16px, 1rem = 16px, 100% = 16px
-     * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
-    */
     font-size: 62.5%;
     scroll-behavior: smooth;
   }
   
-  /* A few media query to set some font sizes at different screen sizes.
-   * This helps automate a bit of responsiveness.
-   * The trick is to use the rem unit for size values, margin and padding.
-   * Because rem is relative to the document font size
-   * when we scale up or down the font size on the document
-   * it will affect all properties using rem units for the values.
-  */
-  
-  /* I am using the em unit for breakpoints
-   * The calculation is the following
-   * screen size divided by browser base font size
-   * As an example: a breakpoint at 980px
-   * 980px / 16px = 61.25em
-  */
-  
-  /* 1200px / 16px = 75em */
+ 
   @media (max-width: 75em) {
     html {
       font-size: 60%;
@@ -114,7 +96,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background: var(--main-red);
+    background: var(--main-header);
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
     z-index: 10;
   }
@@ -138,10 +120,12 @@
     display: block;
     font-size: 2.2rem;
     padding: 2rem;
+    color: var(--main-black);
   }
   
   .nav-list a:hover {
     background: var(--main-blue);
+    color: var(--main-white);
   }
   
   /* Welcome section */
@@ -153,15 +137,18 @@
     align-items: center;
     width: 100%;
     height: 50vh;
-    background-color: #000;
-    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+    background-color:var(--main-white);
   }
   
+  .welcome-section >h1{
+     color: var(--main-black);
+  }
+
   .welcome-section > p {
-    font-size: 3rem;
-    font-weight: 200;
+    font-size: 2rem;
+    font-weight: bold;
     font-style: italic;
-    color: var(--main-red);
+    color: var(--main-black);
   }
   
   /* Projects section */
@@ -169,14 +156,14 @@
   .projects-section {
     text-align: center;
     padding: 10rem 2rem;
-    background: var(--main-white);
+    background: var(--main-gray);
   }
   
   .projects-section-header {
     max-width: 640px;
     margin: 0 auto 6rem auto;
-    border-bottom: 0.2rem solid var(--main-white);
     color: #303841;
+    font-style: italic;
   }
   
   @media (max-width: 28.75em) {
@@ -196,6 +183,22 @@
     margin-bottom: 6rem;
   }
   
+  .projects-grid  a{
+    background-color: var(--main-white);
+  }
+
+  .projects-grid img{
+    margin:10px auto;
+    border-radius:5px;
+    border: 1px solid #999;
+    padding:13px;
+    width: 368px;
+    height:300px;
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+    object-fit:fill;
+  }
+  
   @media (max-width: 30.625em) {
     .projects-section {
       padding: 6rem 1rem;
@@ -209,7 +212,8 @@
   .project {
     background: var(--main-gray);
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    border-radius: 2px;
+    border-radius: 5px;
+    margin-bottom: 10px;
   }
   
   .code {
@@ -230,6 +234,7 @@
   .project-title {
     font-size: 2rem;
     padding: 2rem 0.5rem;
+    background-color: var(--main-black);
   }
   
   .btn {
@@ -240,12 +245,14 @@
   
   .btn-show-all {
     font-size: 2rem;
-    background: var(--main-gray);
+    background: var(--main-header);
+    color: var(--main-black);
     transition: background 0.3s ease-out;
   }
   
   .btn-show-all:hover {
-    background: var(--main-red);
+    background: var(--main-blue);
+    color: var(--main-white);
   }
   
   .btn-show-all:hover > i {
@@ -267,13 +274,14 @@
     align-items: center;
     text-align: center;
     width: 100%;
-    height: 80vh;
+    height: 50vh;
     padding: 0 2rem;
-    background: var(--main-gray);
+    background: var(--main-white);
   }
   
   .contact-section-header > h2 {
     font-size: 6rem;
+    color: var(--main-black);
   }
   
   @media (max-width: 28.75em) {
@@ -284,6 +292,7 @@
   
   .contact-section-header > p {
     font-style: italic;
+    color: var(--main-black);
   }
   
   .contact-links {
@@ -294,11 +303,28 @@
     margin-top: 4rem;
     flex-wrap: wrap;
   }
+
+  .contact-links img{
+    border: 1px solid #999;
+    border-radius: 59%;
+    padding:1px;
+    width: 35px;
+    height:35px;
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+    object-fit:fill;
+  }
+  .contact-links a{
+    color: var(--main-black);
+  }
+
   
   .contact-details {
     font-size: 2.4rem;
     text-shadow: 2px 2px 1px #1f1f1f;
     transition: transform 0.3s ease-out;
+    display: flex;
+    flex-direction: row;
   }
   
   .contact-details:hover {
@@ -312,12 +338,13 @@
     display: flex;
     justify-content: space-evenly;
     padding: 2rem;
-    background: var(--main-gray);
-    border-top: 4px solid var(--main-red);
+    background: var(--main-header);
+    border-top: 4px solid var(--main-gray);
   }
   
-  footer > p {
+  footer > p, footer a {
     margin: 2rem;
+    color: var(--main-black);
   }
   
   footer i {
